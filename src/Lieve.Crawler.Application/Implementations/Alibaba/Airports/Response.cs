@@ -1,11 +1,11 @@
-﻿using System.Text.Json.Serialization;
-using Lieve.Crawler.Application.Interfaces;
+﻿using Lieve.Crawler.Application.Interfaces;
+using Newtonsoft.Json;
 
 namespace Lieve.Crawler.Application.Implementations.Alibaba.Airports;
 
 public sealed class Response : IResponseModel
 {
-    [JsonPropertyName("result")]
+    [JsonProperty("result")]
     public required Result Results { get; set; }
     public required bool Success { get; set; }
     
@@ -23,7 +23,7 @@ public sealed class Response : IResponseModel
         public required int Code { get; set; }
         public required string IataCode { get; set; }
         public required string Name { get; set; }
-        [JsonPropertyName("displayName")]
+        [JsonProperty("displayName")]
         public required List<DisplayName> DisplayNames { get; set; }
         public required string DomainCode { get; set; }
         public required bool IsPopular { get; set; }
@@ -33,7 +33,7 @@ public sealed class Response : IResponseModel
     {
         public int Code { get; set; }
         public required string Name { get; set; }
-        [JsonPropertyName("displayName")]
+        [JsonProperty("displayName")]
         public required List<DisplayName> DisplayNames { get; set; }
         public required string DomainCode { get; set; }
         public required Country Country { get; set; }
@@ -43,7 +43,7 @@ public sealed class Response : IResponseModel
     {
         public required int Code { get; set; }
         public required string Name { get; set; }
-        [JsonPropertyName("displayName")]
+        [JsonProperty("displayName")]
         public required List<DisplayName> DisplayNames { get; set; }
         public required string DomainCode { get; set; }
     }

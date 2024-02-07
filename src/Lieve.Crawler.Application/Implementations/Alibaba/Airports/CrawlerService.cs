@@ -1,19 +1,19 @@
-﻿using Lieve.Crawler.Application.Interfaces;
+﻿using System.Web;
+using Lieve.Crawler.Application.Interfaces;
+using Newtonsoft.Json;
 
 namespace Lieve.Crawler.Application.Implementations.Alibaba.Airports;
 
-public class CrawlerService : ICrawlerService<Request, Response>
+public class CrawlerService(IAlibabaHttpClient alibabaHttpClient) : ICrawlerService<Request, Response>
 {
-    private readonly AlibabaHttpClient _httpClient;
+    public async Task<Response?> FetchAsync(Request request, CancellationToken cancellationToken)
+    {
+        var requestUrl = HttpUtility.HtmlEncode($"api/v1/basic-info/airports/international?filter=ist");
 
-    public CrawlerService(HttpClient httpClient)
-    {
-        _httpClient = httpClient;
-    }
-    
-    public Task<Response> Get(Request request)
-    {
-        
-        throw new NotImplementedException();
+        var response = await alibabaHttpClient.GetAsync(requestUrl, cancellationToken);
+
+        var airports = JsonConvert.DeserializeObject<Response>(response ?? string.Empty);
+
+        return airports;
     }
 }
