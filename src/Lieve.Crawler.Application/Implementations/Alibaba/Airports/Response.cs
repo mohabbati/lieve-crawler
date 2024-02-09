@@ -14,10 +14,10 @@ public sealed class Response : IResponseModel
         public int PageNumber { get; set; }
         public int PageSize { get; set; }
         public int TotalCount { get; set; }
-        public required List<Item> Items { get; set; }
+        public required List<Airport> Items { get; set; }
     }
 
-    public class Item
+    public class Airport
     {
         public required City City { get; set; }
         public required int Code { get; set; }

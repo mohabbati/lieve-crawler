@@ -1,19 +1,23 @@
-﻿using System.Net.Http;
-using Lieve.Crawler.Application.Implementations.Alibaba.Airports;
+﻿using Lieve.Crawler.Application.Implementations.Alibaba.Airports;
 using Lieve.Crawler.Application.Interfaces;
 using Lieve.Crawler.Console.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
 Console.WriteLine("Start getting data...");
 
+var serviceProvider = ConfigureApp();
 
-// Register HttpClient in DI container (assuming console app)
-var services = new ServiceCollection();
-services.AddAlibabaHttpClient();
-var serviceProvider = services.BuildServiceProvider();
-
-// Use HttpClient to fetch data
 var alibabaCrawlerService = serviceProvider.GetService<ICrawlerService<Request, Response>>();
-var data = await alibabaCrawlerService.FetchAsync(new Request() { AirportIataCode = "ist" }, CancellationToken.None);
+await alibabaCrawlerService!.RunAsync(new CancellationToken());
 
-Console.WriteLine(data);
+Console.WriteLine("Fetching data finished.");
+
+return;
+
+static ServiceProvider ConfigureApp()
+{
+    var services = new ServiceCollection();
+    services.AddAlibabaHttpClient();
+    services.AddLieveMongoDbClient();
+    return services.BuildServiceProvider();
+}

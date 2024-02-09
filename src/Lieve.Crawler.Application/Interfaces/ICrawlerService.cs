@@ -5,4 +5,5 @@ public interface ICrawlerService<in TRequest, TResponse>
     where TResponse : IResponseModel
 {
     Task<TResponse?> FetchAsync(TRequest request, CancellationToken cancellationToken);
+    Task RunAsync(CancellationToken cancellationToken);
 }

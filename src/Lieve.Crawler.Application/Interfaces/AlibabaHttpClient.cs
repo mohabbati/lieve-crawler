@@ -1,15 +1,15 @@
-using System.Net.Http.Json;
-using System.Text.Json.Nodes;
+using System.Web;
 
 namespace Lieve.Crawler.Application.Interfaces;
 
 public class AlibabaHttpClient(HttpClient httpClient) : IAlibabaHttpClient
 {
-    public async Task<string?> GetAsync(string endpoint, CancellationToken cancellationToken)
+    public async Task<string?> GetAsync(string endpoint, string query = "", CancellationToken cancellationToken = default)
     {
         try
         {
-            var response = await httpClient.GetAsync(endpoint, cancellationToken);
+            var encodedQuery = HttpUtility.UrlEncode(query);
+            var response = await httpClient.GetAsync($"{endpoint}{encodedQuery}", cancellationToken);
             response.EnsureSuccessStatusCode();
             var jsonContent = await response.Content.ReadAsStringAsync(cancellationToken);
 
