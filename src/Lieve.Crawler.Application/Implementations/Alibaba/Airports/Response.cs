@@ -1,4 +1,6 @@
 ﻿using Lieve.Crawler.Application.Interfaces;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
 
 namespace Lieve.Crawler.Application.Implementations.Alibaba.Airports;
@@ -19,6 +21,9 @@ public sealed class Response : IResponseModel
 
     public class Airport
     {
+        [BsonId]
+        [JsonIgnore]
+        public ObjectId _id { get; set; }
         public required City City { get; set; }
         public required int Code { get; set; }
         public required string IataCode { get; set; }

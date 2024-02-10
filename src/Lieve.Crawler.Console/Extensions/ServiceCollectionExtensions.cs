@@ -1,3 +1,4 @@
+using Lieve.Crawler.Application.Implementations.Alibaba;
 using Lieve.Crawler.Application.Implementations.Alibaba.Airports;
 using Lieve.Crawler.Application.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,7 +29,7 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<IMongoDatabase>(s =>
         {
             var client = s.GetRequiredService<IMongoClient>();
-            return client.GetDatabase("YourDatabaseName");
+            return client.GetDatabase("LieveDb");
         });
 
         return services;

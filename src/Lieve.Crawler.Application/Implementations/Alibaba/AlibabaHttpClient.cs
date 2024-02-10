@@ -1,6 +1,8 @@
 using System.Web;
+using Lieve.Crawler.Application.Helpers;
+using Lieve.Crawler.Application.Interfaces;
 
-namespace Lieve.Crawler.Application.Interfaces;
+namespace Lieve.Crawler.Application.Implementations.Alibaba;
 
 public class AlibabaHttpClient(HttpClient httpClient) : IAlibabaHttpClient
 {
@@ -17,8 +19,9 @@ public class AlibabaHttpClient(HttpClient httpClient) : IAlibabaHttpClient
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
-            return null;
+            ConsoleHelper.CustomConsoleWrite(e.InnerException?.Message ?? e.Message, ConsoleColor.Red);
+
+            throw;
         }
     }
 }

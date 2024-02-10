@@ -8,9 +8,10 @@ Console.WriteLine("Start getting data...");
 var serviceProvider = ConfigureApp();
 
 var alibabaCrawlerService = serviceProvider.GetService<ICrawlerService<Request, Response>>();
-await alibabaCrawlerService!.RunAsync(new CancellationToken());
+await alibabaCrawlerService!.FetchAsync(new CancellationToken());
 
 Console.WriteLine("Fetching data finished.");
+Console.ReadLine();
 
 return;
 
