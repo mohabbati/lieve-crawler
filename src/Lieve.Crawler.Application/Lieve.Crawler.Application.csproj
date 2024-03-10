@@ -16,6 +16,9 @@
       <None Update="Implementations\Alibaba\Resources\IataCodes.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="Implementations\Vendors\Resources\Vendors.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

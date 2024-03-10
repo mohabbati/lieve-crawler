@@ -1,0 +1,275 @@
+﻿[
+  {
+    "Vendor": {
+      "Name": "alibaba",
+      "DisplayName": "علی‌بابا",
+      "Priority": 100,
+      "BaseUrl": "https://www.alibaba.ir/",
+      "LogoUri": "",
+      "FavIconUri": "https://www.alibaba.ir/favicon-32x32.png",
+      "IsActive": false,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flights/[FROM][ALL?]-[TO]?adult=[ADL]&child=[CHD]&infant=[INF]&departing=[YYYY-MM-DD]&returning=[YYYY-MM-DD?]"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "international/[FROM][ALL?]-[TO][ALL?]?adult=[ADL]&child=[CHD]&infant=[INF]&departing=[YYYY-MM-DD]&returning=[YYYY-MM-DD?]&flightClass=[CABINCLASS?]"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "flytoday",
+      "DisplayName": "فلای‌تودی",
+      "Priority": 200,
+      "BaseUrl": "https://www.flytoday.ir/",
+      "LogoUri": "https://cdn-a.flytoday.ir/upload/flytoday/public/white-labels/flytoday/images/logo.svg",
+      "FavIconUri": "https://cdn-a.flytoday.ir/upload/flytoday/public/white-labels/flytoday/images/favicon.ico",
+      "IsActive": false,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flight/search?departure=[FROM],[ALL]&arrival=[TO],[ALL]&departureDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]&adt=[ADL]&chd=[CHD]&inf=[INF]&cabin=[CABINCLASS]&isDomestic=true"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "flight/search?departure=[FROM],[ALL]&arrival=[TO],[ALL]&departureDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]&adt=[ADL]&chd=[CHD]&inf=[INF]&cabin=[CABINCLASS]"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "mrbilit",
+      "DisplayName": "‌مِستر بلیط",
+      "Priority": "500",
+      "BaseUrl": "https://mrbilit.com/",
+      "LogoUri": "https://mrbilit.com/_nuxt/mrbilit_logo.5b9396e3.svg",
+      "FavIconUri": "https://mrbilit.com/favicon.ico",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flights/[FROM][ALL?]-[TO][ALL?]?departureDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]&adultCount=[ADL]&childCount=[CHD?]&infantCount=[INF?]"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "flights/[FROM][ALL?]-[TO][ALL?]?departureDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]&adultCount=[ADL]&childCount=[CHD?]&infantCount=[INF?]&cabinClass=%2FY"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "snapptrip",
+      "DisplayName": "اسنپ تریپ‌",
+      "Priority": "600",
+      "BaseUrl": "https://www.snapptrip.com/",
+      "LogoUri": "https://cdnsnapptrip.com/js/assets/apps/shared/website/homepage/web/_next/static/media/snapp-trip-logo-persian.a91c8b7e.svg",
+      "FavIconUri": "https://www.snapptrip.com/favicon.ico",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flights/[FROM]_[FROMEN]/[TO]_[TOEN]?roundTrip=[ISROUNDTRIP]&adultCount=[ADL]&childCount=[CHD]&inLapCount=[INF]&date=[YYYY-MM-DD]&cabinType=E&returnDate=[YYYY-MM-DD?]"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "inter-flights/[FROM]_[FROMEN]/[TO]_[TOEN]?adultCount=[ADL]&cabinType=[CABINCLASS]&childCount=[CHD]&dateType=jalali&departureDate=[YYYY-MM-DD]&destinationCityName=[TOFA]&destinationIsCity=[ISALL]&infantCount=[INF]&originCityName=[FROMFA]&originIsCity=[ISALL]&returnDate=[YYYY-MM-DD?]&tripType=[TRIPTYPE]"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "trip.ir",
+      "DisplayName": "تریپ.ir‌",
+      "Priority": "700",
+      "BaseUrl": "https://www.trip.ir/",
+      "LogoUri": "https://cdn.trip.ir/photos/fa-trip-logo.svg",
+      "FavIconUri": "https://www.trip.ir/Content/photos/favicon.ico",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flightBooking/SearchResult/[FRPM]/[TO]/[ISONEWAY]/[DD-MM-YYYY]/[DD-MM-YYYY]/[ADL]/[CHD]/[INF]/[CABINCLASS]/true"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "flightBooking/SearchResult/[FRPM]/[TO]/[ISONEWAY]/[DD-MM-YYYY]/[DD-MM-YYYY]/[ADL]/[CHD]/[INF]/[CABINCLASS]/false"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "eligasht",
+      "DisplayName": "‌الی گشت",
+      "Priority": "800",
+      "BaseUrl": "https://www.eligasht.com/",
+      "LogoUri": "https://cdn.elicdn.com/Content/Images/Logos/eligasht-text-logo.png",
+      "FavIconUri": "https://cdn.elicdn.com/Content/Images/Logos/favicon-32x32.png",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flights/search?trip=[FROM]-[TO]-[YYYY-MM-DD]|[TO]-[FROM]-[YYYY-MM-DD?]&Adult=[ADL]&Child=[CHD]&Infant=[INF]&FlightClass=[CABINCLASS]"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "flights/search?trip=[FROM]-[TO]-[YYYY-MM-DD]|[TO]-[FROM]-[YYYY-MM-DD?]&Adult=[ADL]&Child=[CHD]&Infant=[INF]&FlightClass=[CABINCLASS]"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "780.ir",
+      "DisplayName": "هفـ‌هشتاد‌",
+      "Priority": "900",
+      "BaseUrl": "https://780.ir/tourism/",
+      "LogoUri": "",
+      "FavIconUri": "https://780.ir/tourism/favicon.ico",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flights/[FROM]-[TO]?adult=[ADL]&child=[CHD]&departureDate=[YYYY-MM-DD]&infant=[INF]&returningDate=[YYYY-MM-DD?]&sort=lowPrice"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "international/[FROM]-[TO]?adult=[ADL]&cabinType=[CABINTYPE]&child=[CHD]&departureDate=[YYYY-MM-DD]&destinationType=[ISALL]&infant=[INF]&originType=[ISALL]&returningDate=[YYYY-MM-DD?]&sort=lowPrice&tripMode=[TRIPTYPE]"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "3click",
+      "DisplayName": "سه‌کلیک‌",
+      "Priority": "910",
+      "BaseUrl": "https://3click.com/",
+      "LogoUri": "https://3click.com/Logo.svg",
+      "FavIconUri": "https://3click.com/3C.ico",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flight/[FROM]-[TO]/search?scope=[LOCALITYTYPE]&pCount=[ADL+CHD+INF]&flightClass=[CABINCLASS]&flightType=[TRIPTYPE]&adults=[ADL]&child=[CHD]&infant=[INF]&flightDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "flight/[FROM]-[TO]/search?scope=[LOCALITYTYPE]&pCount=[ADL+CHD+INF]&flightClass=[CABINCLASS]&flightType=[TRIPTYPE]&adults=[ADL]&child=[CHD]&infant=[INF]&flightDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "pateh",
+      "DisplayName": "پته",
+      "Priority": "920",
+      "BaseUrl": "https://www.pateh.com/",
+      "LogoUri": "https://www.pateh.com/images/pateh_web.png",
+      "FavIconUri": "https://www.pateh.com/favicon.ico",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flightsearch/[FROM]-[TO]?departing=[YYYY/MM/DD]&returning=[YYYY/MM/DD]&flightType=ir&adults=[ADL]&children=[CHD]&infants=[INF]&roundTrip=[ISROUNDTRIP]"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "flightsearch/[FROM]-[TO]?departing=[YYYY/MM/DD]&returning=[YYYY/MM/DD]&flightType=in&adults=[ADL]&children=[CHD]&infants=[INF]&roundTrip=[ISROUNDTRIP]"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "respina24",
+      "DisplayName": "رسپینا",
+      "Priority": "930",
+      "BaseUrl": "https://respina24.ir/",
+      "LogoUri": "https://respina24.ir/imgs/icons/logo.png",
+      "FavIconUri": "https://respina24.ir/_nuxt/icons/icon_64x64.8c130d.png",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flight/[FROM]-[TO]?date=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]&adults=[ADL]&childs=[CHD]&infants=[INF]"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "internationalflight/search/[FROM]/[TO]?date=[YYYY-MM-DD]&adult=[ADL]&child=[CHD]&infant=[INF]&cabinType=[CABINCLASS]&tripType=[TRIPTYPE]&fromAirPort=[FROM]&toAirPort=[TO]&fromIsCity=[ISALL]&toIsCity=[ISALL]&returnDate=[YYYY-MM-DD?]"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "booking.ir",
+      "DisplayName": "بوکینگ",
+      "Priority": "940",
+      "BaseUrl": "https://www.booking.ir/",
+      "LogoUri": "https://www.booking.ir/themes/booking.ir/ui/dist/images/new-logo.svg",
+      "FavIconUri": "https://www.booking.ir/enfavicon.ico",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flight/dom/[FROM]-[TO]/?dep=[YYYY-MM-DD]&ret=[YYYY-MM-DD?]&adt=[ADL]&chd=[CHD]&inf=[INF]&cab=[CABINCLASS]#/"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "flight/int/[FROM][ALL?]-[TO][ALL?]/?dep=[YYYY-MM-DD]&ret=[YYYY-MM-DD?]&adt=[ADL]&chd=[CHD]&inf=[INF]&cab=[CABINCLASS]#/"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "samtik",
+      "DisplayName": "سامتیک",
+      "Priority": "950",
+      "BaseUrl": "https://www.samtik.com/",
+      "LogoUri": "https://www.samtik.com/Content/Version3/Content/Site/img/logo.png",
+      "FavIconUri": "https://www.samtik.com/Content/Images/favicon2.ico",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "flight/[FROM]-[TO]-[YYYYMMDD]-[ADL]-[CHD]-[INF]-[YYYYMMDD?]/بلیط-هواپیما"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "flight-international/[FROM]-[TO]-[YYYYMMDD]-[YYYYMMDD?]-[INF]-[CHD]-[INF]-[CABINCLASS]"
+        }
+      ]
+    }
+  },
+  {
+    "Vendor": {
+      "Name": "tikban",
+      "DisplayName": "تیکـ‌بان",
+      "Priority": "960",
+      "BaseUrl": "https://tikban.com/",
+      "LogoUri": "https://tikban.com/Content/Images/logo/Brand-icon.svg",
+      "FavIconUri": "https://tikban.com/Content/Images/favIcon/favIcon.png",
+      "IsActive": true,
+      "ProvidedServices": [
+        {
+          "ServiceType": "DomesticFlight",
+          "UriTemplate": "Flight/Search/Domestic/[CABINCLASS]/[ADL]/[CHD]/[INF]/[FROM]/[TO]/[YYYYMMDD]/[YYYYMMDD?]"
+        },
+        {
+          "ServiceType": "InternationalFlight",
+          "UriTemplate": "Flight/Search/International/[CABINCLASS]/[ADL]/[CHD]/[INF]/[FROM]/[TO]/[YYYYMMDD]/[YYYYMMDD?]"
+        }
+      ]
+    }
+  }
+]

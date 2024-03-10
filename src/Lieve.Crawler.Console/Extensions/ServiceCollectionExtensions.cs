@@ -1,5 +1,6 @@
 using Lieve.Crawler.Application.Implementations.Alibaba;
 using Lieve.Crawler.Application.Implementations.Alibaba.Airports;
+using Lieve.Crawler.Application.Implementations.Vendors;
 using Lieve.Crawler.Application.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
@@ -26,11 +27,18 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<IMongoClient, MongoClient>(s =>
             new MongoClient("mongodb://localhost:27017"));
         
-        services.AddSingleton<IMongoDatabase>(s =>
+        services.AddSingleton(s =>
         {
             var client = s.GetRequiredService<IMongoClient>();
             return client.GetDatabase("LieveDb");
         });
+
+        return services;
+    }
+
+    public static IServiceCollection AddVendorPersistent(this IServiceCollection services)
+    {
+        services.AddScoped<IVendorPersistent, VendorPersistent>();
 
         return services;
     }

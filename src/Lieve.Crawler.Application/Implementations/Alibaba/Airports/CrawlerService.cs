@@ -31,7 +31,7 @@ public class CrawlerService(
     {
         var random = new Random();
 
-        var codes = new List<string> {"FIG"};// Resources.Resources.GetAirportsIataCodes().OrderBy(x => x);}
+        var codes = Resources.Resources.GetAirportsIataCodes().OrderBy(x => x).ToList();
         
         foreach (var iataCode in codes)
         {
