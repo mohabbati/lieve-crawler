@@ -53,11 +53,11 @@
       "ProvidedServices": [
         {
           "ServiceType": "DomesticFlight",
-          "UriTemplate": "flights/[FROM][ALL?]-[TO][ALL?]?departureDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]&adultCount=[ADL]&childCount=[CHD?]&infantCount=[INF?]"
+          "UriTemplate": "flights/[FROM][ALL?]-[TO][ALL?]?departureDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]&adultCount=[ADL]&childCount=[CHD]&infantCount=[INF]"
         },
         {
           "ServiceType": "InternationalFlight",
-          "UriTemplate": "flights/[FROM][ALL?]-[TO][ALL?]?departureDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]&adultCount=[ADL]&childCount=[CHD?]&infantCount=[INF?]&cabinClass=%2FY"
+          "UriTemplate": "flights/[FROM][ALL?]-[TO][ALL?]?departureDate=[YYYY-MM-DD]&returnDate=[YYYY-MM-DD?]&adultCount=[ADL]&childCount=[CHD]&infantCount=[INF]&cabinClass=%2FY"
         }
       ]
     }
@@ -74,11 +74,11 @@
       "ProvidedServices": [
         {
           "ServiceType": "DomesticFlight",
-          "UriTemplate": "flights/[FROM]_[FROMEN]/[TO]_[TOEN]?roundTrip=[ISROUNDTRIP]&adultCount=[ADL]&childCount=[CHD]&inLapCount=[INF]&date=[YYYY-MM-DD]&cabinType=E&returnDate=[YYYY-MM-DD?]"
+          "UriTemplate": "flights/[FROM]-[FROMCITY]/[TO]-[TOCITY]?roundTrip=[ISROUNDTRIP]&adultCount=[ADL]&childCount=[CHD]&inLapCount=[INF]&date=[YYYY-MM-DD]&cabinType=E&returnDate=[YYYY-MM-DD?]&source=searchBox"
         },
         {
           "ServiceType": "InternationalFlight",
-          "UriTemplate": "inter-flights/[FROM]_[FROMEN]/[TO]_[TOEN]?adultCount=[ADL]&cabinType=[CABINCLASS]&childCount=[CHD]&dateType=jalali&departureDate=[YYYY-MM-DD]&destinationCityName=[TOFA]&destinationIsCity=[ISALL]&infantCount=[INF]&originCityName=[FROMFA]&originIsCity=[ISALL]&returnDate=[YYYY-MM-DD?]&tripType=[TRIPTYPE]"
+          "UriTemplate": "inter-flights/[FROM]_[FROMCITY]/[TO]_[TOCITY]?adultCount=[ADL]&originCode=[FROM]&destinationCode=[TO]&cabinType=[CABINCLASS]&childCount=[CHD]&dateType=jalali&departureDate=[YYYY-MM-DD]&destinationCity=[TOCITY]&destinationIsCity=[ISALL]&infantCount=[INF]&originCity=[FROMCITY]&originIsCity=[ISALL]&returnDate=[YYYY-MM-DD?]&tripType=[TRIPTYPE]&source=searchBox&homepage_version=new"
         }
       ]
     }
